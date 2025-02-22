@@ -38,17 +38,28 @@ android {
             )
         }
     }
-    flavorDimensions += "mode"
+    flavorDimensions += "tier"
+    flavorDimensions += "role"
     productFlavors {
         create("free") {
-            dimension = "mode"
+            dimension = "tier"
             applicationIdSuffix = ".free"
             versionNameSuffix = "-free"
         }
         create("pro") {
-            dimension = "mode"
+            dimension = "tier"
             applicationIdSuffix = ".pro"
             versionNameSuffix = "-pro"
+        }
+        create("seller") {
+            dimension = "role"
+            applicationIdSuffix = ".seller"
+            versionNameSuffix = "-seller"
+        }
+        create("admin") {
+            dimension = "role"
+            applicationIdSuffix = ".admin"
+            versionNameSuffix = "-admin"
         }
     }
     compileOptions {
