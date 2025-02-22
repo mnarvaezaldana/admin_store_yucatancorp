@@ -3,8 +3,8 @@
 /local.properties
 /.idea/caches
 /.idea/vcs.xml
-/.idea/gradle.xml
-/.idea/misc.xml
+.idea/gradle.xml
+.idea/misc.xml
 /.idea/libraries
 /.idea/modules.xml
 /.idea/kotlinc.xml
