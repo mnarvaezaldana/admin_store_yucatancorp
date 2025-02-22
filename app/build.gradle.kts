@@ -20,11 +20,46 @@ android {
 
     buildTypes {
         release {
+            isDebuggable = false
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            isDebuggable = true
+            isMinifyEnabled = false
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    flavorDimensions += "tier"
+    flavorDimensions += "role"
+    productFlavors {
+        create("free") {
+            dimension = "tier"
+            applicationIdSuffix = ".free"
+            versionNameSuffix = "-free"
+        }
+        create("pro") {
+            dimension = "tier"
+            applicationIdSuffix = ".pro"
+            versionNameSuffix = "-pro"
+        }
+        create("seller") {
+            dimension = "role"
+            applicationIdSuffix = ".seller"
+            versionNameSuffix = "-seller"
+        }
+        create("admin") {
+            dimension = "role"
+            applicationIdSuffix = ".admin"
+            versionNameSuffix = "-admin"
         }
     }
     compileOptions {
