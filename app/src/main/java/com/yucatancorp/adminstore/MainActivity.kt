@@ -80,7 +80,9 @@ fun LoginTextField(stringValue: Int, hasToggle: Boolean, hasVisualTransformation
                 IconButton(onClick = { isPasswordVisible = !isPasswordVisible }) {
                     Icon(
                         imageVector = if (isPasswordVisible) Icons.Default.Add else Icons.Default.Call,
-                        contentDescription = if (isPasswordVisible) "Hide password" else "Show password"
+                        contentDescription = stringResource(
+                            if (isPasswordVisible) R.string.hide_password else R.string.show_password
+                        )
                     )
                 }
             }
