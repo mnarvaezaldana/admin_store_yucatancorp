@@ -2,7 +2,9 @@
 /build
 local.properties
 .idea/misc.xml
+/.idea/misc.xml
 .idea/vcs.xml
+/.idea/vcs.xml
 build/
 *.iml
 .DS_Store
